@@ -27,7 +27,7 @@ function drawPlayer() {
     // Draw head
     context.beginPath();
     context.arc(headX, headY, headRadius, 0, Math.PI * 2);
-    context.fillStyle = 'black';
+    context.fillStyle = 'white';
     context.fill();
     context.closePath();
 
@@ -35,7 +35,7 @@ function drawPlayer() {
     context.beginPath();
     context.moveTo(headX, headY + headRadius);
     context.lineTo(headX, headY + headRadius + bodyLength);
-    context.strokeStyle = 'black';
+    context.strokeStyle = 'white';
     context.lineWidth = 2;
     context.stroke();
     context.closePath();
@@ -46,7 +46,7 @@ function drawPlayer() {
     context.lineTo(headX - armLength, headY + headRadius + 20);
     context.moveTo(headX, headY + headRadius + 10);
     context.lineTo(headX + armLength, headY + headRadius + 20);
-    context.strokeStyle = 'black';
+    context.strokeStyle = 'white';
     context.lineWidth = 2;
     context.stroke();
     context.closePath();
@@ -57,7 +57,7 @@ function drawPlayer() {
     context.lineTo(headX - legLength, headY + headRadius + bodyLength + legLength);
     context.moveTo(headX, headY + headRadius + bodyLength);
     context.lineTo(headX + legLength, headY + headRadius + bodyLength + legLength);
-    context.strokeStyle = 'black';
+    context.strokeStyle = 'white';
     context.lineWidth = 2;
     context.stroke();
     context.closePath();
@@ -81,7 +81,8 @@ function drawStar(star) {
 }
 
 function clear() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = 'black'; // Set background color to black
+    context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function newStar() {
